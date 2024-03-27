@@ -17,9 +17,9 @@ app.use(express.urlencoded({ extended: true, limit: "50mb" }));
 app.use(cors());
 
 // 라우터 세팅
-app.use("/user", userRouter);
-app.use("/register", registerRouter);
-app.use("/auth", authRouter);
+app.use("api/user", userRouter);
+app.use("api/register", registerRouter);
+app.use("api/auth", authRouter);
 
 mongoose
   .connect(uri)
